@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Baskervville, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Link from "next/link";
 
 const baskervville = Baskervville({
   weight: '400',

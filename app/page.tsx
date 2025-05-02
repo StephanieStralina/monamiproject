@@ -1,9 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <>
-      <section className="p-15" id="about">
+      <section className="p-12" id="about">
         <div className="img1">
           <Image 
             src="/img/tomatoes.jpg"
