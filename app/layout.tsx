@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${baskervville.variable} ${outfit.variable} antialiased`}
+        className={`${baskervville.variable} ${outfit.variable} antialiased flex flex-col`}
       >
         <header>
           <nav>Nav elements here</nav>
