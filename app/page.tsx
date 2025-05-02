@@ -3,12 +3,13 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <section className="p-10" id="about">
+      <section className="p-15" id="about">
         <div className="img1">
           <Image 
             src="/img/tomatoes.jpg"
             width={1200}
             height={800}
+            className="w-full h-auto"
             alt="Picture of tomatoes"
             />
         </div>
@@ -17,6 +18,7 @@ export default function Home() {
             src="/img/pasta.jpg"
             width={800}
             height={1200}
+            className="w-full h-auto"
             alt="Picture of pasta cheesy guy"
             />
         </div>
@@ -25,6 +27,7 @@ export default function Home() {
             src="/img/feast.jpg"
             width={1200}
             height={800}
+            className="w-full h-auto"
             alt="Spread of bread, soup, escargot"
             />
         </div>

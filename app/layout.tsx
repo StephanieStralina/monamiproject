@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Baskervville, Outfit } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/Navbar";
 
 const baskervville = Baskervville({
   weight: '400',
@@ -30,7 +31,7 @@ export default function RootLayout({
         className={`${baskervville.variable} ${outfit.variable} antialiased flex flex-col`}
       >
         <header>
-          <nav>Nav elements here</nav>
+          <Navbar />
         </header>
         <main>
           {children}
