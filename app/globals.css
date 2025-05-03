@@ -7,7 +7,8 @@
   --color-mainred: #751A2B;
   --color-accentgrey: #3B3B3C;
   --color-accentwhite: #EAEAEA;
-  --font-baserkville: var(--font-baskervville);
+  --font-baskervville: var(--font-baskervville);
+  --font-outfit: var(--font-outfit);
 }
 
 :root {
@@ -26,9 +27,17 @@ body {
   margin: 0;
 }
 
-h1 {
+h1,
+h2 {
   font-family: var(--font-baskervville), serif;
+}
+
+h1 {
   font-size: 3vw;
+}
+
+h2 {
+  font-size: 2.5vw;
 }
 
 p {

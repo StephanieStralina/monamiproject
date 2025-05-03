@@ -29,7 +29,6 @@ export default function Home() {
             src="/img/feast.jpg"
             width={1200}
             height={800}
-            // className="w-full h-auto"
             className="object-cover"
             alt="Spread of bread, soup, escargot"
             />
