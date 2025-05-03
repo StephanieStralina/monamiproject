@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <section className="p-12" id="about">
+      <section className="lg:p-12" id="about">
         <div className="img1">
           <Image 
             src="/img/tomatoes.jpg"
@@ -28,12 +28,12 @@ export default function Home() {
             src="/img/feast.jpg"
             width={1200}
             height={800}
-            className="w-full h-auto"
+            // className="w-full h-auto"
+            className="object-cover"
             alt="Spread of bread, soup, escargot"
             />
         </div>
-        <div className="about-text">
-          <h1 className="pb-5">About</h1>
+          <h1 className="pb-5"> About</h1>
           <p>Mon Ami Gabi is a classic French bistro that embraces a passion for food, 
           wine and culture. Whether you come for the Onion Soup Au Gratin, Steak Frites 
           or decadent Profiteroles, Mon Ami Gabi offers something to satisfy all tastes. 
@@ -46,7 +46,6 @@ export default function Home() {
           <br />
           While the favorites are here in abundance, there's always something new when you're 
           ready to fall in love all over again.</p>
-        </div>
       </section>
       <section className="reservations">
         <h1>Make a Reservation</h1>
