@@ -37,11 +37,12 @@ export default function Home() {
           <p>Mon Ami Gabi is a classic French bistro that embraces a passion for food, 
           wine and culture. Whether you come for the Onion Soup Au Gratin, Steak Frites 
           or decadent Profiteroles, Mon Ami Gabi offers something to satisfy all tastes. 
-          For those looking to indulge in a unique dish, the Escargots de Bourgogne with 
-          garlic-herb butter is literally a sizzling experience.<br />
+          For those looking to indulge in a 
+          <span className="italic font-light text-mainred"> unique dish</span>, 
+          the Escargots de Bourgogne with garlic-herb butter is literally a sizzling experience.<br />
           <br />
-          To complement the menu, an extensive selection of more than 80 boutique French wine 
-          varietals, handpicked by renowned chef and owner Gabino Sotelino, are served by the 
+          To complement the menu, an extensive selection of more than <span className="italic font-light text-mainred">80 boutique French wine 
+          varietals</span>, handpicked by renowned chef and owner Gabino Sotelino, are served by the 
           glass or bottle from our signature rolling wine cart.<br />
           <br />
           While the favorites are here in abundance, there's always something new when you're 
