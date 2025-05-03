@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reservation from "./components/Reservation";
+import Events from "./components/Events";
+import Info from "./components/Info";
 
 export default function Home() {
   return (
@@ -52,8 +54,10 @@ export default function Home() {
         <Reservation />
       </section>
       <section className="events">
-        <h1>Upcoming Events</h1>
-        <p>Event Carousel Here</p>
+        <Events />
+      </section>
+      <section className="restaurantinfo">
+        <Info />
       </section>
     </>
   );
