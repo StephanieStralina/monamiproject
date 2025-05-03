@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Baskervville } from 'next/font/google'
+
 
 //To-do, dynamic styling for socials based on location
 
@@ -47,8 +47,8 @@ export default function Navbar() {
             </div>
             <div className="location-container">
                 <div className="current-location">
-                <p className="text-[2vw]">Chicago</p>
-                <Link href="/" className="text-[1vw]">CHANGE LOCATION</Link>
+                    <p className="font-baskervville text-[2vw]">Chicago</p>
+                    <Link href="/" className="font-outfit">CHANGE LOCATION</Link>
                 </div>
                 <div className="decor-line right" aria-hidden="true" />
                 <div className="decor-dot right" aria-hidden="true" />

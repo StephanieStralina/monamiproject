@@ -27,24 +27,9 @@ body {
   margin: 0;
 }
 
-h1,
-h2 {
-  font-family: var(--font-baskervville), serif;
-}
 
 h1 {
   font-size: 3vw;
-}
-
-h2 {
-  font-size: 2.5vw;
-}
-
-p {
-  font-weight: 200;
-  font-family: var(--font-outfit), Helvetica, sans-serif;
-  font-size: 1.4vw;
-  line-height: 160%;
 }
 
 /* About section for gallery display desktop */
@@ -89,10 +74,15 @@ p {
 #about h1 {
   grid-row: 2 / 7;
   padding-top: 3vmin;
+  font-family: var(--font-baskervville);
 }
 
 #about p {
   grid-row: 3 / 7;
+  font-weight: 200;
+  font-size: 1.4vw;
+  line-height: 160%;
+  font-family: var(--font-outfit);
 }
 
 /* End About Section desktop */
@@ -105,8 +95,6 @@ nav {
   gap: 1vmin;
   align-items: center;
   padding-top: 2.2vmin;
-  font-family: var(--font-baskervville);
-  font-size: 1.5vw;
 }
 
 .social-container,
@@ -129,6 +117,7 @@ nav {
 .location-container {
   grid-column: 3 / 4;
   text-align: center;
+  justify-self: end;
 }
 
 .nav-links {
@@ -137,18 +126,20 @@ nav {
   display: flex;
   justify-content: center;
   gap: 6vmin;
+  font-size: 1.5vw;
+  font-family: var(--font-baskervville);
 }
 
 .current-location p {
-  font-family: var(--font-baskervville);
-  font-size: 2vw;
   line-height: 100%;
+  /* font-family: var(--font-baskervville);
+  font-size: 2vw; */
 }
 
-.current-location a {
+/* .current-location a {
   font-family: var(--font-outfit);
   font-size: 1vw;
-}
+} */
 
 .nav-links a:hover {
   text-decoration: underline;

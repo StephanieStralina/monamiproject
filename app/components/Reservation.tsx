@@ -5,7 +5,7 @@ export default function Reservation() {
     return (
         <div className="bg-accentwhite h-[60vmin] flex">
             <div className="flex-[2] flex flex-col items-center">
-                <h2 className="text-center pt-30 pl-5 mb-2">Make a Reservation</h2>
+                <h2 className="text-center pt-30 pl-6 mb-2 font-baskervville text-[clamp(1rem,4.8vmin,3rem)]">Make a Reservation</h2>
                 <form className="flex flex-col w-[45vmin] gap-3 text-left font-outfit pl-5">
                     <label htmlFor="people" className="sr-only">Number of People</label>
                     <input 
