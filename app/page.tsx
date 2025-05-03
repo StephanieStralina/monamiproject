@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import Reservation from "./components/Reservation";
 
 export default function Home() {
   return (
     <>
-      <section className="lg:p-12" id="about">
+      <section className="lg:px-15 lg:pt-20 lg:pb-5" id="about">
         <div className="img1">
           <Image 
             src="/img/tomatoes.jpg"
@@ -49,8 +50,7 @@ export default function Home() {
           ready to fall in love all over again.</p>
       </section>
       <section className="reservations">
-        <h1>Make a Reservation</h1>
-        <p>Widget Here</p>
+        <Reservation />
       </section>
       <section className="events">
         <h1>Upcoming Events</h1>

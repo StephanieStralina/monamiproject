@@ -1,37 +1,70 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Baskervville } from 'next/font/google'
+
+//To-do, dynamic styling for socials based on location
+
+const navLinks = [
+    { name: "Reservations", href: "/reservations" },
+    { name: "Menu", href: "/menu" },
+    { name: "Events", href: "/events" },
+    { name: "Private Parties", href: "/parties" },
+    { name: "Pick Up", href: "/pickup" },
+    { name: "Delivery", href: "/delivery" },
+    { name: "Contact Us", href: "/contact" },
+    { name: "Gallery", href: "/gallery" },
+]
 
 export default function Navbar() {
     return ( 
-        <nav>
-            <div className="social-icons">
-              Social Icons
+        <nav role="navigation" aria-label="Main site navigation">
+            <div className="social-container">
+                <div className="social-icons flex gap-2 pl-6">
+                <a href="https://x.com/MonAmiGabiChi" target='_blank' aria-label="Follow us on Twitter">
+                    <img src="/img/twitter.svg" alt="" className="h-[5vmin] w-auto"/>
+                </a>
+                <a href="https://www.instagram.com/monamigabichicago/" target='_blank' aria-label="Follow us on Instagram">
+                    <img src="/img/instagram.svg" alt="" className="h-[5vmin] w-auto"/>
+                </a>
+                <a href="https://www.facebook.com/MonAmiGabiChi" target='_blank' aria-label="Like us on Facebook">
+                    <img src="/img/facebook.svg" alt="" className="h-[5vmin] w-auto"/>
+                </a>
+                </div>
+                <div className="decor-line hidden lg:block" aria-hidden="true" />
+                <div className="decor-dot hidden lg:block" aria-hidden="true" />
             </div>
-            <div className="w-2/5 logo">
+            <div className="logo">
             <Link href="/">
                 <Image 
                     src="/img/logo.png" 
                     width={938}
                     height={196}
-                    className="w-full h-auto pl-5"
+                    className="w-auto max-h-[12vmin] pl-5"
                     alt="Mon Ami Gabi Logo with text reading A Classic French Bistro"
                 />
               </Link>
             </div>
-            <div className="current-location">
-              Chicago, change location
+            <div className="location-container">
+                <div className="current-location">
+                <p className="text-[2vw]">Chicago</p>
+                <Link href="/" className="text-[1vw]">CHANGE LOCATION</Link>
+                </div>
+                <div className="decor-line right" aria-hidden="true" />
+                <div className="decor-dot right" aria-hidden="true" />
             </div>
-            <div className="nav-links">
-              <Link href="/reservations">Reservations</Link>
-              <Link href="/menu">Menu</Link>
-              <Link href="/events">Events</Link>
-              <Link href="/parties">Private Parties</Link>
-              <Link href="/pickup">Pick Up</Link>
-              <Link href="/delivery">Delivery</Link>
-              <Link href="/contact">Conatct Us</Link>
-              <Link href="/gallery">Gallery</Link>
-            </div>       
+                <ul className="nav-links">
+                {navLinks.slice(0, 2).map(link => (
+                    <li key={link.name}>
+                        <Link href={link.href}>{link.name}</Link>
+                    </li>
+                ))}
+                {navLinks.slice(2).map(link => (
+                    <li key={link.name} className="hidden lg:inline">
+                        <Link href={link.href}>{link.name}</Link>
+                    </li>
+                ))}
+                </ul>     
           </nav>
     )
 }
