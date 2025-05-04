@@ -90,7 +90,6 @@ nav {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   grid-template-rows: 1fr auto;
-  gap: 1vmin;
   align-items: center;
   padding-top: 2.2vmin;
 }
@@ -255,7 +254,7 @@ nav {
 
 .nav-dropdown, .dropdown {
   grid-row: 2/3;
-  grid-column: 1/4;
+  grid-column:1/4;
 }
 
 }

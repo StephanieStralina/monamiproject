@@ -43,7 +43,7 @@ export default function Navbar() {
                 <div className="decor-line right" aria-hidden="true" />
                 <div className="decor-dot right" aria-hidden="true" />
             </div>
-            <ul className="nav-links hidden lg:flex">
+            <ul className="nav-links hidden lg:flex lg:pt-4">
             {navLinks.map(link => (
                 <li key={link.name} className="hidden lg:flex">
                 <Link href={link.href}>{link.name}</Link>
@@ -52,10 +52,10 @@ export default function Navbar() {
             </ul>
 
             {/* Mobile & Tablet Dropdown */}
-            <div className="nav-dropdown sm:block w-full lg:hidden px-0 mt-2">
+            <div className="nav-dropdown sm:block w-full lg:hidden px-0 mt-4">
             <details className="dropdown dropdown-bottom w-full">
-                <summary className=" btn font-baskervville bg-mainblue text-white w-full text-lg">
-                Reservations, Menu and More &#709;
+                <summary className="font-baskervville bg-mainblue text-white w-full text-lg cursor-pointer p-2 text-center">
+                Reservations, Menu and More
                 </summary>
                 <ul className="w-full items-center shadow menu dropdown-content z-[1] bg-white text-mainblue">
                 <li className="block sm:hidden">
