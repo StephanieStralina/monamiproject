@@ -3,6 +3,7 @@ import { Baskervville, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Link from "next/link";
+import Footer from "./components/Footer";
 
 const baskervville = Baskervville({
   weight: '400',
@@ -37,9 +38,7 @@ export default function RootLayout({
         <main>
           {children}
         </main>
-        <footer>
-          footer stuff here
-        </footer>
+        <Footer />
       </body>
     </html>
   );
