@@ -33,8 +33,8 @@ export default function Navbar() {
                     src="/img/logo.png" 
                     width={938}
                     height={196}
-                    className="w-auto max-h-[12vmin] md:max-h-[8vmin] sm:p-0 md:pl-5"
-                    alt="Mon Ami Gabi Logo with text reading A Classic French Bistro"
+                    className="w-auto max-h-[12vmin] md:max-h-[8vmin] sm:pl-3 md:pl-5"
+                    alt="Mon Ami Gabi Chicago Logo with text below reading A Classic French Bistro"
                 />
               </Link>
             </div>

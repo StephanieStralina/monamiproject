@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function Reservation() {
     return (
         <div className="bg-accentwhite h-[60vmin] flex">
-            <div className="flex-[2] flex flex-col items-center">
-                <h2 className="text-center pt-30 pl-6 mb-2 font-baskervville text-[clamp(1rem,4.8vmin,3rem)]">Make a Reservation</h2>
-                <form className="flex flex-col w-[45vmin] gap-3 text-left font-outfit pl-5">
+            <div className="flex-[2] flex flex-col items-center w-full">
+                <h2 className="text-center sm:pt-5 lg:pt-30 pl-6 mb-2 font-baskervville text-[4.2vmin] lg:text-[clamp(1rem,4.8vmin,3rem)]">Make a Reservation</h2>
+                <form className="flex flex-col w-full gap-3 text-left font-outfit pl-5">
                     <label htmlFor="people" className="sr-only">Number of People</label>
                     <input 
                     type="text" 
