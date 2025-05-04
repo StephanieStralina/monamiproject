@@ -59,12 +59,33 @@ export default function Info() {
             </tbody>
           </table>
           <div className="mt-5 text-[2.7vmin] font-extralight flex flex-col gap-2">
-            <Link href="/contact">Contact Us</Link>
-            <p>773.348.8886</p>
-            <Link href="/GoogleMaps">
+            <div className="flex items-center">
+                <Image src="/img/mail.png"
+                 width={1024}
+                 height={1024}
+                 className="w-10 h-10"
+                 alt="Contact Us via Email"/>
+                <Link href="/contact" className="pl-2">Contact Us</Link>
+            </div>
+            <div className="flex items-center">
+            <Image src="/img/phone.png"
+                 width={1024}
+                 height={1024}
+                 className="w-10 h-10"
+                 alt="Contact Us via Phone"/>
+            <p className="pl-2">773.348.8886</p>
+            </div>
+            <div className="flex items-center">
+            <Image src="/img/map.png"
+                 width={1024}
+                 height={1024}
+                 className="w-10 h-10"
+                 alt="Visit us at our Chicago location!"/>
+            <Link href="/GoogleMaps" className="pl-2">
               2300 N. Lincoln Park West<br></br>
               Chicago, IL 60614
             </Link>
+            </div>
           </div>
         </div>
       </div>
