@@ -7,7 +7,7 @@ import Info from "./components/Info";
 export default function Home() {
   return (
     <>
-      <section className="lg:px-15 lg:pt-20 lg:pb-5" id="about">
+      <section className="lg:px-15 lg:pt-20 pb-5" id="about">
         <div className="img1">
           <Image 
             src="/img/tomatoes.jpg"
@@ -26,7 +26,7 @@ export default function Home() {
             alt="Picture of pasta cheesy guy"
             />
         </div>
-        <div className="img3">
+        <div className="img3 lg:mt-4">
           <Image 
             src="/img/feast.jpg"
             width={1200}
@@ -35,8 +35,8 @@ export default function Home() {
             alt="Spread of bread, soup, escargot"
             />
         </div>
-          <h1 className="pb-5"> About</h1>
-          <p>Mon Ami Gabi is a classic French bistro that embraces a passion for food, 
+          <h1 className="pb-5 font-baskervville"> About</h1>
+          <p className="font-outfit">Mon Ami Gabi is a classic French bistro that embraces a passion for food, 
           wine and culture. Whether you come for the Onion Soup Au Gratin, Steak Frites 
           or decadent Profiteroles, Mon Ami Gabi offers something to satisfy all tastes. 
           For those looking to indulge in a 

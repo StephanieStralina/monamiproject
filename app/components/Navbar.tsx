@@ -1,6 +1,8 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Socials from './Socials'
+import Location from './Location'
 
 
 //To-do, dynamic styling for socials based on location
@@ -16,21 +18,12 @@ const navLinks = [
     { name: "Gallery", href: "/gallery" },
 ]
 
+
 export default function Navbar() {
     return ( 
         <nav role="navigation" aria-label="Main site navigation">
-            <div className="social-container">
-                <div className="social-icons flex gap-2 pl-6">
-                <a href="https://x.com/MonAmiGabiChi" target='_blank' aria-label="Follow us on Twitter">
-                    <img src="/img/twitter.svg" alt="" className="h-[5vmin] w-auto"/>
-                </a>
-                <a href="https://www.instagram.com/monamigabichicago/" target='_blank' aria-label="Follow us on Instagram">
-                    <img src="/img/instagram.svg" alt="" className="h-[5vmin] w-auto"/>
-                </a>
-                <a href="https://www.facebook.com/MonAmiGabiChi" target='_blank' aria-label="Like us on Facebook">
-                    <img src="/img/facebook.svg" alt="" className="h-[5vmin] w-auto"/>
-                </a>
-                </div>
+            <div className="social-container hidden lg:block">
+                <Socials />
                 <div className="decor-line hidden lg:block" aria-hidden="true" />
                 <div className="decor-dot hidden lg:block" aria-hidden="true" />
             </div>
@@ -40,31 +33,45 @@ export default function Navbar() {
                     src="/img/logo.png" 
                     width={938}
                     height={196}
-                    className="w-auto max-h-[12vmin] pl-5"
+                    className="w-auto max-h-[12vmin] md:max-h-[8vmin] sm:p-0 md:pl-5"
                     alt="Mon Ami Gabi Logo with text reading A Classic French Bistro"
                 />
               </Link>
             </div>
-            <div className="location-container">
-                <div className="current-location">
-                    <p className="font-baskervville text-[2vw]">Chicago</p>
-                    <Link href="/" className="font-outfit">CHANGE LOCATION</Link>
-                </div>
+            <div className="location-container hidden sm:block">
+                <Location />
                 <div className="decor-line right" aria-hidden="true" />
                 <div className="decor-dot right" aria-hidden="true" />
             </div>
-                <ul className="nav-links">
-                {navLinks.slice(0, 2).map(link => (
+            <ul className="nav-links hidden lg:flex">
+            {navLinks.map(link => (
+                <li key={link.name} className="hidden lg:flex">
+                <Link href={link.href}>{link.name}</Link>
+                </li>
+            ))}
+            </ul>
+
+            {/* Mobile & Tablet Dropdown */}
+            <div className="nav-dropdown sm:block w-full lg:hidden px-0 mt-2">
+            <details className="dropdown dropdown-bottom w-full">
+                <summary className=" btn font-baskervville bg-mainblue text-white w-full text-lg">
+                Reservations, Menu and More &#709;
+                </summary>
+                <ul className="w-full items-center shadow menu dropdown-content z-[1] bg-white text-mainblue">
+                <li className="block sm:hidden">
+                    <Location />
+                </li>
+                {navLinks.map(link => (
                     <li key={link.name}>
-                        <Link href={link.href}>{link.name}</Link>
+                    <Link href={link.href}>{link.name}</Link>
                     </li>
                 ))}
-                {navLinks.slice(2).map(link => (
-                    <li key={link.name} className="hidden lg:inline">
-                        <Link href={link.href}>{link.name}</Link>
-                    </li>
-                ))}
-                </ul>     
+                <li>
+                    <Socials />
+                </li>
+                </ul>
+            </details>
+            </div>  
           </nav>
     )
 }

@@ -9,6 +9,8 @@
   --color-accentwhite: #EAEAEA;
   --font-baskervville: var(--font-baskervville);
   --font-outfit: var(--font-outfit);
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 1024px;
 }
 
 :root {
@@ -62,7 +64,6 @@ h1 {
 #about .img3 {
   grid-column: 2 / 5;
   grid-row: 5 / 9;
-  margin-top: 2vmin;
 }
 
 #about h1,
@@ -73,8 +74,6 @@ h1 {
 
 #about h1 {
   grid-row: 2 / 7;
-  padding-top: 3vmin;
-  font-family: var(--font-baskervville);
 }
 
 #about p {
@@ -82,7 +81,6 @@ h1 {
   font-weight: 200;
   font-size: 1.4vw;
   line-height: 160%;
-  font-family: var(--font-outfit);
 }
 
 /* End About Section desktop */
@@ -129,17 +127,6 @@ nav {
   font-size: 1.5vw;
   font-family: var(--font-baskervville);
 }
-
-.current-location p {
-  line-height: 100%;
-  /* font-family: var(--font-baskervville);
-  font-size: 2vw; */
-}
-
-/* .current-location a {
-  font-family: var(--font-outfit);
-  font-size: 1vw;
-} */
 
 .nav-links a:hover {
   text-decoration: underline;
@@ -254,19 +241,22 @@ nav {
     padding-right: 3vmin;
     font-size: 2.4vw;
   }
-
   /* End About Section Tablet Styling */
 
-  /* Tablet Nav Styling */
+/* Tablet Nav Styles */
+nav {
+  grid-template-columns: 1fr 1fr;
+} 
 
-  /* nav {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1vmin;
-    align-items: center;
-    padding-top: 2.2vmin;
-    font-family: var(--font-baskervville);
-    font-size: 1.5vw;
-  } */
+.logo {
+  grid-column: 1 / 3;
+  justify-self: start;
+}
+
+.nav-dropdown, .dropdown {
+  grid-row: 2/3;
+  grid-column: 1/4;
+}
 
 }
 
@@ -318,4 +308,11 @@ nav {
     object-fit: cover;
     padding-top: 2vmin;
   }
+
+  /* Nav Styling Mobile */
+
+  .logo {
+    justify-self: center;
+  }
+  
 }
