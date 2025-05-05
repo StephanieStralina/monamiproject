@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Reservation from './components/ReserveForm';
 import Events from './components/Events';
-import Info from './components/Info';
+import HoursInfo from './components/HoursInfo';
 
 export default function Home() {
   return (
@@ -23,7 +23,7 @@ export default function Home() {
         <meta property="og:image" content="/img/feast.jpg" />
       </Head>
 
-      <section className="lg:px-15 lg:pt-20 pb-5" id="about">
+      <section className="lg:px-15 lg:pt-10 pb-5" id="about">
         <div className="img1">
           <Image
             src="/img/tomatoes.jpg"
@@ -58,7 +58,7 @@ export default function Home() {
             priority
           />
         </div>
-        <h1 className="pb-5 font-baskervville"> About</h1>
+        <h1 className="md:mt-[3vmin] font-baskervville"> About</h1>
         <p className="font-outfit">
           Mon Ami Gabi is a classic French bistro that embraces a passion for
           food, wine and culture. Whether you come for the Onion Soup Au Gratin,
@@ -88,7 +88,7 @@ export default function Home() {
         <Events />
       </section>
       <section className="restaurantinfo">
-        <Info />
+        <HoursInfo />
       </section>
     </>
   );

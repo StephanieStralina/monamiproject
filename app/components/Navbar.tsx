@@ -41,7 +41,7 @@ export default function Navbar() {
         <div className="decor-line right" aria-hidden="true" />
         <div className="decor-dot right" aria-hidden="true" />
       </div>
-      <ul className="nav-links hidden lg:flex lg:pt-4">
+      <ul className="nav-links hidden lg:flex lg:pt-8">
         {navLinks.map((link) => (
           <li key={link.name} className="hidden lg:flex">
             <Link href={link.href}>{link.name}</Link>

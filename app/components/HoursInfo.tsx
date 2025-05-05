@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Info() {
+export default function HoursInfo() {
   return (
     <div className="bg-mainblue h-[75vmin] flex pb-]">
       <div className="flex-[1] h-full w-full">
