@@ -191,7 +191,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: rgb(var(--mainred-rgb), 0.25);
+    background-color: rgb(var(--mainred-rgb), 0.85);
     z-index: 1;
   }
 

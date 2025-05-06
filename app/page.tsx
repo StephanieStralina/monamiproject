@@ -8,15 +8,14 @@ import HoursInfo from './components/HoursInfo';
 export default function Home() {
   return (
     <>
-      <section className="lg:px-15 lg:pt-10 pb-5" id="about" aria-labelledby="about-heading">
+      <section className="lg:px-15 lg:pt-10 pb-5" id="about" aria-labelledby="about-information">
         <div className="tomatoes-img">
           <Image
             src="/img/tomatoes.jpg"
             width={1200}
             height={800}
             className="w-full h-auto"
-            alt="Red and orange baby tomatoes in aqua blue baskets on a 
-            rustic striped wood cutting board."
+            alt="Red and orange tomatoes in blue baskets on a wooden board."
             priority
           />
         </div>
@@ -26,8 +25,7 @@ export default function Home() {
             width={800}
             height={1200}
             className="w-full h-auto"
-            alt="A close up of a chef's hands as they use a microplane grater to 
-            top a bowl of pasta with fresh parmesan."
+            alt="Chef grating parmesan over a bowl of pasta."
             priority
           />
         </div>
@@ -37,14 +35,13 @@ export default function Home() {
             width={1200}
             height={800}
             className="object-cover"
-            alt="A delicious looking spread of French Bistro food including items 
-            like of tomato bisque, escargot in garlic-herb butter, a fresh baguette, 
-            Onion Soup Au Gratin, and 2 glasses of white wine."
+            alt="French bistro spread with soup, escargot, baguette, and white wine."
             priority
           />
         </div>
         <h1 className="md:mt-[3vmin] font-baskervville text-[6.5vmin] lg:text-[clamp(1rem,5.6vmin,4rem)] xl:text-[clamp(1rem,7.2vmin,4rem)]"> About</h1>
-        <p className="font-outfit">
+        <p className="font-outfit"
+          id="about-information">
           Mon Ami Gabi is a classic French bistro that embraces a passion for
           food, wine and culture. Whether you come for the Onion Soup Au Gratin,
           Steak Frites or decadent Profiteroles, Mon Ami Gabi offers something
@@ -66,13 +63,19 @@ export default function Home() {
           new when you're ready to fall in love all over again.
         </p>
       </section>
-      <section className="reservations" aria-labelledby="reservations-heading">
+      <section 
+        className="reservations" 
+        aria-labelledby="reservations-heading">
         <Reservation />
       </section>
-      <section className="events" aria-labelledby="events-heading">
+      <section 
+        className="events" 
+        aria-labelledby="events-heading">
         <Events />
       </section>
-      <section className="restaurantinfo" aria-labelledby="restaurant-info-heading">
+      <section 
+        className="restaurantinfo" 
+        aria-labelledby="restaurant-info-heading">
         <HoursInfo />
       </section>
     </>

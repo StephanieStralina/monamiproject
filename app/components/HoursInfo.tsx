@@ -12,7 +12,7 @@ export default function HoursInfo() {
           height={530}
           className="h-full w-auto object-cover object-right 
           max-h-[70vmin] md:-translate-x-[4vmin]"
-          alt="Picture of charcuterie board"
+          alt="Charcuterie board with spread of cheese, meat, and fruit."
         />
       </div>
       <div
@@ -24,7 +24,8 @@ export default function HoursInfo() {
           sm:pl-[10vmin] sm:mr-15 lg:pl-[20vmin]">
           <h2
             className="font-baskervville text-[4vmin] sm:text-[5vmin] 
-            w-full whitespace-nowrap">
+            w-full whitespace-nowrap"
+            id="restaurant-info-heading">
             Mon Ami Gabi Chicago
           </h2>
           <Link

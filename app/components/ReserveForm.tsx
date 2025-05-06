@@ -57,7 +57,8 @@ export default function Reservation() {
                 {isSubmitted ? (
                     <div className="text-center" role="status" aria-live="polite">
                         <h2
-                            className="font-baskervville text-[5vmin] text-mainblue mb-4">
+                            className="font-baskervville text-[5vmin] text-mainblue mb-4"
+                            id="reservation-succes">
                             See you soon!
                         </h2>
                         <p className="font-outfit text-lg">
@@ -69,9 +70,10 @@ export default function Reservation() {
                 ) : (
                     <>
                         <h2
-                            className="mb-2 font-baskervville text-[6.5vmin] 
+                            className="mb-2 font-baskervville text-[6.5vmin] text-mainblue
                             lg:text-[clamp(1rem,5.6vmin,4rem)] xl:text-[clamp(1rem,7.2vmin,4rem)] 
-                            text-center w-full">
+                            text-center w-full"
+                            id="reservations-heading">
                             Make a Reservation
                         </h2>
                         <form
@@ -148,8 +150,7 @@ export default function Reservation() {
                         width={1200}
                         height={800}
                         className="w-full h-full object-cover object-top-left -z-1 lg:z-1"
-                        alt="A salmon filet with a golden crust topped with a sprig of thyme 
-                        sitting on a plate of pomegranate glaze."
+                        alt="Seared salmon with thyme on pomegranate glaze."
                     />
                     <div className="absolute inset-0 bg-accentwhite opacity-70 -z-0 lg:hidden" />
                 </div>

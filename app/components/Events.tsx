@@ -114,8 +114,9 @@ export default function Events() {
     return (
         <div className="bg-white p-6 space-y-4 min-h-[70vmin]">
             <h2
-                className="font-baskervville text-center text-[6.5vmin] 
-            lg:text-[clamp(1rem,5.6vmin,4rem)] xl:text-[clamp(1rem,7.2vmin,4rem)]">
+                className="font-baskervville text-center text-[6.5vmin] text-mainblue
+            lg:text-[clamp(1rem,5.6vmin,4rem)] xl:text-[clamp(1rem,7.2vmin,4rem)]"
+            id="events-heading">
                 Upcoming Events
             </h2>
 
@@ -183,7 +184,6 @@ export default function Events() {
                             <div
                                 key={event.ID}
                                 role="group"
-                                aria-labelledby={`event-title-${event.title}`}
                                 ref={(el) => {
                                     if (el) cardHeightRefs.current[i] = el;
                                 }}
@@ -206,7 +206,7 @@ export default function Events() {
                                         dangerouslySetInnerHTML={{ __html: event.content }}
                                     />
                                     <div className="card-actions justify-between items-end mt-4">
-                                        <span className="text-sm text-mainblue underline">
+                                        <span className="text-sm text-mainblue italic">
                                             {event.date ?? ""}
                                         </span>
                                         {event.cta_url && event.cta_btn && (
