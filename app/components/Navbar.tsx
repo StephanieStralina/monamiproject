@@ -4,8 +4,6 @@ import Link from 'next/link';
 import Socials from './Socials';
 import Location from './Location';
 
-//To-do, dynamic styling for socials based on location
-
 const navLinks = [
   { name: 'Reservations', href: '/reservations' },
   { name: 'Menu', href: '/menu' },

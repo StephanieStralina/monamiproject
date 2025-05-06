@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Baskervville, Outfit } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
-import Link from "next/link";
 import Footer from "./components/Footer";
 
 const baskervville = Baskervville({
@@ -18,8 +17,9 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
-  title: "Mon Ami Gabi",
+  title: "Mon Ami Gabi Chicago",
   description: "Located in the heart of Lincoln Park, Mon Ami Gabi is a classic French bistro serving delicious French food.",
+  keywords: ["French restaurant Chicago", "Chicago dining", "Mon Ami Gabi", "Lincoln Park restaurant", "French bistro Chicago"],
 };
 
 export default function RootLayout({
@@ -29,16 +29,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/logo.png" />
+      </head>
       <body
         className={`${baskervville.variable} ${outfit.variable} antialiased flex flex-col`}
       >
-        <header>
+        <header role="banner">
           <Navbar />
         </header>
-        <main className="flex-grow">
+        <main role="main" className="flex-grow">
           {children}
         </main>
-        <Footer />
+        <footer role="contentinfo">
+          <nav aria-label="Footer navigation">
+            <Footer />
+          </nav>
+        </footer>
       </body>
     </html>
   );

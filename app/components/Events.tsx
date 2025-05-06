@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import React, { useEffect, useState } from "react";
 
 //Display as cards w/ next buttons
@@ -35,7 +35,12 @@ export default function Events() {
             const upcomingEvents = data.filter((event) => {
                 const cleanedDate = event.date?.replace(/(\d+)(st|nd|rd|th)/, ""); //regex for date parsing
                 const parsedDate = cleanedDate ? new Date(cleanedDate) : null;
-                return !parsedDate || parsedDate >= new Date();
+                return !parsedDate || parsedDate >= new Date()
+            })
+                .sort((a, b) => {
+                    if (a.date === null && b.date !== null) return 1;
+                    if (a.date !== null && b.date === null) return -1;
+                    return 0;
             });
 
             setAllEvents(upcomingEvents);
