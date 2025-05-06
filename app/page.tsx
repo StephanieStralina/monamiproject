@@ -58,7 +58,7 @@ export default function Home() {
             priority
           />
         </div>
-        <h1 className="md:mt-[3vmin] font-baskervville"> About</h1>
+        <h1 className="md:mt-[3vmin] font-baskervville text-[6.5vmin] lg:text-[clamp(1rem,5.6vmin,4rem)] xl:text-[clamp(1rem,7.2vmin,4rem)]"> About</h1>
         <p className="font-outfit">
           Mon Ami Gabi is a classic French bistro that embraces a passion for
           food, wine and culture. Whether you come for the Onion Soup Au Gratin,
