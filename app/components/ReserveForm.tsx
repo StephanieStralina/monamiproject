@@ -61,8 +61,8 @@ export default function Reservation() {
                             See you soon!
                         </h2>
                         <p className="font-outfit text-lg">
-                            Your reservation for <strong>{people}</strong> on
-                            <strong>{date}</strong> at <strong>{time}</strong> was
+                            Your reservation for <strong>{people}</strong> on 
+                            <strong> {date}</strong> at <strong>{time}</strong> was
                             successful.
                         </p>
                     </div>

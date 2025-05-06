@@ -102,7 +102,7 @@ export default function Events() {
             }
         }, 100);
         return () => clearTimeout(timer);
-    }, [filteredEvents, currentIndex, cardsPerPage]);
+    }, [filteredEvents, currentIndex, cardsPerPage, cardHeight]);
 
 
     useEffect(() => {
