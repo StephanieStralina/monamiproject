@@ -17,7 +17,7 @@ const navLinks = [
 
 export default function Navbar() {
   return (
-    <nav role="navigation" aria-label="Main site navigation">
+    <nav role="navigation" aria-label="Main site navigation" id="top-nav">
       <div className="social-container hidden lg:block">
         <Socials />
         <div className="decor-line hidden lg:block" aria-hidden="true" />
@@ -29,7 +29,8 @@ export default function Navbar() {
             src="/img/logo.png"
             width={938}
             height={196}
-            className="w-auto max-h-[12vmin] md:max-h-[8vmin] lg:max-h-[10vmin] sm:pl-3 md:pl-5"
+            className="w-auto max-h-[12vmin] 
+            md:max-h-[8vmin] lg:max-h-[10vmin] sm:pl-3 md:pl-5"
             alt="Mon Ami Gabi Chicago Logo with text below reading A Classic French Bistro"
           />
         </Link>
@@ -50,13 +51,18 @@ export default function Navbar() {
       {/* Mobile & Tablet Dropdown */}
       <div className="nav-dropdown sm:block w-full lg:hidden px-0 mt-4">
         <details className="dropdown dropdown-bottom w-full">
-          <summary 
+          <summary
             className="font-baskervville bg-mainblue text-white w-full 
-            text-lg cursor-pointer p-2 text-center">
+             hover:bg-white hover:text-mainblue
+            text-lg cursor-pointer p-2 text-center
+            relative appearance-none list-none
+            before:content-['▶'] before:relative before:-left-5
+            after:content-['◀'] after:relative after:-right-5
+            ">
             Reservations, Menu and More
           </summary>
-          <ul 
-          className="w-full items-center shadow menu dropdown-content 
+          <ul
+            className="w-full items-center shadow menu dropdown-content 
           z-[1] bg-white text-mainblue">
             <li className="block sm:hidden">
               <Location />

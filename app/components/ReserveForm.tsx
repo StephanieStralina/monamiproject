@@ -8,7 +8,8 @@ export default function Reservation() {
     const [date, setDate] = useState<string>('');
     const [error, setError] = useState<string | null>(null);
     const [isSubmitted, setIsSubmitted] = useState(false);
-    
+
+    const isFormFilled = people.trim() !== '' && time.trim() !== '' && date.trim() !== '';
     const dateRegex = /^((Jan(uary)?|Feb(ruary)?|Mar(ch)?|Apr(il)?|May|Jun(e)?|Jul(y)?|Aug(ust)?|Sep(tember)?|Oct(ober)?|Nov(ember)?|Dec(ember)?)\s\d{1,2},\s\d{2,4}|(0?[1-9]|1[0-2])[\/\-](0?[1-9]|[12]\d|3[01])[\/\-]\d{2,4})$/i;
     const timeRegex = /^(0?[1-9]|1[0-2])(:[0-5][0-9])?\s?(am|pm)$/i;
 
@@ -121,7 +122,10 @@ export default function Reservation() {
 
                             <button
                                 type="submit"
-                                className="font-baskervville bg-mainblue text-white px-4 py-2 uppercase text-xl rounded-br-xl mt-1"
+                                className={`font-baskervville px-4 py-2 uppercase text-xl rounded-br-xl 
+                                mt-1 text-white transition-colors
+                                ${isFormFilled ? 'bg-mainblue hover:bg-mainred' : 'bg-mainblue opacity-50 cursor-not-allowed'}`}
+                                disabled={!isFormFilled}
                             >
                                 Find a Table
                             </button>
@@ -144,7 +148,8 @@ export default function Reservation() {
                         width={1200}
                         height={800}
                         className="w-full h-full object-cover object-top-left -z-1 lg:z-1"
-                        alt="A salmon filet with a golden crust topped with a sprig of thyme sitting on a plate of pomegranate glaze."
+                        alt="A salmon filet with a golden crust topped with a sprig of thyme 
+                        sitting on a plate of pomegranate glaze."
                     />
                     <div className="absolute inset-0 bg-accentwhite opacity-70 -z-0 lg:hidden" />
                 </div>

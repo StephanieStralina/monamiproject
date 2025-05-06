@@ -1,30 +1,15 @@
-import Head from 'next/head';
 import React from 'react';
 import Image from 'next/image';
 import Reservation from './components/ReserveForm';
 import Events from './components/Events';
 import HoursInfo from './components/HoursInfo';
 
+
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>Mon Ami Gabi | A Classic French Bistro in Chicago</title>
-        <meta
-          name="description"
-          content="Enjoy classic French cuisine at Mon Ami Gabi in Chicago. 
-            Discover steak frites, escargot, French wine, and more."
-        />
-        <meta property="og:title" content="Mon Ami Gabi Chicago" />
-        <meta
-          property="og:description"
-          content="Classic French bistro dining in the heart of Lincoln Park."
-        />
-        <meta property="og:image" content="/img/feast.jpg" />
-      </Head>
-
-      <section className="lg:px-15 lg:pt-10 pb-5" id="about">
-        <div className="img1">
+      <section className="lg:px-15 lg:pt-10 pb-5" id="about" aria-labelledby="about-heading">
+        <div className="tomatoes-img">
           <Image
             src="/img/tomatoes.jpg"
             width={1200}
@@ -35,7 +20,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="img2">
+        <div className="pasta-img">
           <Image
             src="/img/pasta.jpg"
             width={800}
@@ -46,7 +31,7 @@ export default function Home() {
             priority
           />
         </div>
-        <div className="img3 lg:mt-4">
+        <div className="french-feast lg:mt-4">
           <Image
             src="/img/feast.jpg"
             width={1200}
@@ -81,13 +66,13 @@ export default function Home() {
           new when you're ready to fall in love all over again.
         </p>
       </section>
-      <section className="reservations">
+      <section className="reservations" aria-labelledby="reservations-heading">
         <Reservation />
       </section>
-      <section className="events">
+      <section className="events" aria-labelledby="events-heading">
         <Events />
       </section>
-      <section className="restaurantinfo">
+      <section className="restaurantinfo" aria-labelledby="restaurant-info-heading">
         <HoursInfo />
       </section>
     </>

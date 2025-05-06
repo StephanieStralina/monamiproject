@@ -10,28 +10,29 @@ export default function HoursInfo() {
           src="/img/charcuterie1.png"
           width={582}
           height={530}
-          className="h-full w-auto object-cover object-right max-h-[70vmin] md:-translate-x-[4vmin]"
+          className="h-full w-auto object-cover object-right 
+          max-h-[70vmin] md:-translate-x-[4vmin]"
           alt="Picture of charcuterie board"
         />
       </div>
-      <div 
+      <div
         className="flex-[2] md:flex-[1] items-end
         w-full font-outfit font-light text-white 
         pt-10 sm:pt-15 xl:pt-20">
-        <div 
+        <div
           className="flex flex-col align-left pl-[5vmin]
           sm:pl-[10vmin] sm:mr-15 lg:pl-[20vmin]">
-          <h2 
+          <h2
             className="font-baskervville text-[4vmin] sm:text-[5vmin] 
             w-full whitespace-nowrap">
             Mon Ami Gabi Chicago
           </h2>
-          <Link 
-            href="/" 
+          <Link
+            href="/"
             className="italic text-[1.8vmin] text-xs md:text-sm">
             CHANGE LOCATION
           </Link>
-          <table 
+          <table
             className="table-auto items-center font-extralight text-[2.7vmin] 
             md:text-md mt-5 md:mt-10 w-[50vmin] md:w-[vmin]"
             aria-label="Mon Ami Gabi Chicago open hours">
@@ -73,7 +74,7 @@ export default function HoursInfo() {
           </table>
           <div className="flex flex-col text-[2.7vmin] font-extralight gap-2 mt-5">
             <div className="flex items-center">
-              <Image 
+              <Image
                 src="/img/mail.png"
                 width={1024}
                 height={1024}
@@ -83,7 +84,7 @@ export default function HoursInfo() {
               <a href="mailto:info@monamigabi.com" className="pl-2">Contact Us</a>
             </div>
             <div className="flex items-center">
-              <Image 
+              <Image
                 src="/img/phone.png"
                 width={1024}
                 height={1024}
@@ -93,7 +94,7 @@ export default function HoursInfo() {
               <a href="tel:+17733488886" className="pl-2">773.348.8886</a>
             </div>
             <div className="flex items-start">
-              <Image 
+              <Image
                 src="/img/map.png"
                 width={1024}
                 height={1024}

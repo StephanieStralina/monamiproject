@@ -1,8 +1,9 @@
+import React from "react"
 
 export default function NotFoundPage() {
     return (
         <div>
-        Nothing's here, only Zuul
+            <p className="font-outfit text-2xl text-center">Nothing's here, only Zuul</p>
         </div>
     )
 }

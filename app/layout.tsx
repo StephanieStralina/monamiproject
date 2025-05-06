@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   description: "Located in the heart of Lincoln Park, Mon Ami Gabi is a classic French bistro serving delicious French food.",
   keywords: ["French restaurant Chicago", "Chicago dining", "Mon Ami Gabi", "Lincoln Park restaurant", "French bistro Chicago"],
 };
+//would add opengraph, etc.
 
 export default function RootLayout({
   children,
@@ -30,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/img/logo.png" />
       </head>
       <body
         className={`${baskervville.variable} ${outfit.variable} antialiased flex flex-col`}
